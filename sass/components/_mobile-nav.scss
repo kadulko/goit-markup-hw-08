@@ -1,0 +1,118 @@
+.burger-menu {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: black;
+  background-color: inherit;
+  border: 0;
+  cursor: pointer;
+  fill: black;
+
+  &:hover,
+  &:focus {
+    fill: rgba(33, 150, 243, 1);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: 550px;
+  padding: 48px 40px;
+  background-color: white;
+  z-index: 999;
+  transform: translateX(0);
+  transition: transform 250ms ease-in-out;
+
+  &--is-hidden {
+    transform: translateX(100%);
+  }
+  &__close-btn {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 22px;
+    right: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: black;
+    background-color: inherit;
+    border: 0;
+
+    &:hover,
+    &:focus {
+      fill: rgba(33, 150, 243, 1);
+    }
+  }
+  &__close-btn-img {
+    width: 24px;
+    height: 24px;
+  }
+  &__contact-data {
+    position: absolute;
+    bottom: 134px;
+  }
+
+  &__contact-data-link {
+    text-decoration: none;
+    display: block;
+    &--phone {
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 40px;
+      letter-spacing: 0.02em;
+      color: rgba(33, 150, 243, 1);
+      margin-bottom: 32px;
+    }
+    &--mail {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+      color: rgba(117, 117, 117, 1);
+    }
+  }
+
+  &__social-media {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: rgba(33, 33, 33, 0.2);
+    position: absolute;
+    bottom: 48px;
+  }
+  &__social-media-link {
+    text-decoration: none;
+    color: rgba(33, 150, 243, 1);
+  }
+}
+
+.mobile-nav {
+  &__item {
+    margin-bottom: 32px;
+  }
+  &__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    color: rgba(33, 33, 33, 1);
+  }
+  &__link--active {
+    color: rgba(33, 150, 243, 1);
+  }
+}

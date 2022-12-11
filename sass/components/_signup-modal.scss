@@ -1,0 +1,137 @@
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  background-color: var(--white-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--white-background-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__close-btn-img {
+    fill: black;
+  }
+}
+
+.signup-form {
+  &__header {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--dark-text-color);
+    margin-bottom: 12px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    position: relative;
+  }
+
+  &__input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    padding: 12px 14px 12px 42px;
+    margin: 4px 0px 10px 0px;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    ::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+
+  &__icon-container {
+    width: 42px;
+    height: 40px;
+    position: absolute;
+    top: 18px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    fill: var(--dark-text-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__textarea {
+    height: 120px;
+    resize: none;
+    padding: 12px 16px;
+  }
+
+  &__statement {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #757575;
+    margin: 10px 0px 30px 0px;
+    cursor: pointer;
+  }
+
+  &__statement-checkbox {
+    width: 0px;
+    height: 0px;
+    border: 0px;
+    outline: 0px;
+    opacity: 0;
+  }
+
+  &__statement-checkbox-replacement {
+    position: relative;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--dark-text-color);
+    border-radius: 2px;
+  }
+
+  &__statement-checkmark {
+    display: none;
+    position: absolute;
+    left: 3px;
+    top: 4px;
+  }
+
+  &__item:focus-within &__input,
+  &__item:focus-within &__icon {
+    border-color: var(--highlight-color);
+    fill: var(--highlight-color);
+  }
+
+  &__statement:has(input:checked) &__statement-checkbox-replacement {
+    background-color: var(--highlight-color);
+    border-width: 0px;
+  }
+
+  &__statement:has(input:checked) &__statement-checkmark {
+    display: block;
+    fill: var(--white-background-color);
+  }
+}

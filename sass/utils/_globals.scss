@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font), var(--secondary-font), sans-serif;
+  color: var(--basic-text-color);
+  background: var(--white-background-color);
+  margin: 0;
+}
+
+.no-bullet {
+  list-style-type: none;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.highlight {
+  color: var(--highlight-color);
+}
+
+.dark-background {
+  background: var(--dark-background-color);
+  color: white;
+}
+
+.gray-background {
+  background: var(--gray-background-color);
+}
