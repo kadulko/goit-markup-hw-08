@@ -15,7 +15,11 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    width: 210px;
+    width: calc((100vw - 60px) / 2);
+
+    @media screen and (min-width: 480px) {
+      width: 210px;
+    }
 
     @media screen and (min-width: 768px) {
       width: 226px;

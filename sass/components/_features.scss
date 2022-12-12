@@ -2,23 +2,20 @@
   display: flex;
   gap: 30px;
   margin-bottom: 50px;
-
-  flex-basis: 450px;
   flex-direction: column;
 
   @media screen and (min-width: 768px) {
-    flex-basis: 354px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  @media screen and (min-width: 1200px) {
-    flex-basis: 270px;
-  }
-
   &__item {
-    width: 450px;
+    width: calc(100vw - 30px);
+
+    @media screen and (min-width: 480px) {
+      width: 450px;
+    }
 
     @media screen and (min-width: 768px) {
       width: 354px;

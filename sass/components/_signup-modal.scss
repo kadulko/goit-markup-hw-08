@@ -1,12 +1,17 @@
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+
+  width: 100vw;
   padding: 40px;
   background-color: var(--white-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and (min-width: 528px) {
+    width: 528px;
+    height: 581px;
+  }
 
   &__close-btn {
     position: absolute;
@@ -83,10 +88,10 @@
   }
 
   &__statement {
-    text-align: center;
+    text-align: left;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: baseline;
     gap: 4px;
     font-size: 14px;
     line-height: 24px;
@@ -94,6 +99,12 @@
     color: #757575;
     margin: 10px 0px 30px 0px;
     cursor: pointer;
+
+    @media screen and (min-width: 480px) {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__statement-checkbox {

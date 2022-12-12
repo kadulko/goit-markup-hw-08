@@ -35,7 +35,7 @@
   transition: transform 250ms ease-in-out;
 
   &--is-hidden {
-    transform: translateX(100%);
+    transform: translateX(150%);
   }
   &__close-btn {
     width: 30px;
